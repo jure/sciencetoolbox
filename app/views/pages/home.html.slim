@@ -3,6 +3,9 @@
     .text-center
       = image_tag 'science-toolbox-logo.png', id: 'logo'
       h1.headline ScienceToolbox
+.row
+  .small-12.columns
+      input#search
   = render 'pages/tool_list', tools: @tools
 .row.form
   .small-12.columns
