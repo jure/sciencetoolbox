@@ -1,11 +1,11 @@
 $('#searchform').onsubmit = function() { return false }
 $('#search').keydown(function() {
   var searchVal = $(this).val()
-  if (searchVal.length > 2) {
-    $('a').not('a[href*="'+searchVal+'"]').parent().parent().css('display', 'none')
-    $('a[href*="'+searchVal+'"]').parent().parent().css('display', 'block')
+  if (searchVal.length > 1) {
+    $('a').not('a:contains("'+searchVal+'")').closest('li').css('display', 'none')
+    $('a:contains("'+searchVal+'")').closest('li').css('display', 'block')
   }
   else {
-    $('a').parent().parent().css('display', 'block')
+    $('a').closest('li').css('display', 'block')
   }
 })
