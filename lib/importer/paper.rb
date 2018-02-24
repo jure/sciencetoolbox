@@ -27,7 +27,7 @@ module Importer
     end
 
     def self.doi_url(doi)
-      "http://dx.doi.org/" + doi
+      "https://doi.org/" + doi
     end
 
     def initialize(result, text, source)
